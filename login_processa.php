@@ -55,6 +55,10 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
                 $_SESSION['name'] = $row['name'];
 
+                $_SESSION['end'] = $row['end'];
+
+                $_SESSION['tel'] = $row['tel'];
+
                 
                 header("Location: home.php");
 

@@ -11,7 +11,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_name'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type=text/css href="style_home2.css">
+    <link rel="stylesheet" type=text/css href="css/style_home2.css">
     <title>Game Consert | Home</title>
 </head>
     <body>
@@ -62,7 +62,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_name'])) {
                         <div class="details">
                         <h2>Criar Chamado</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quibusdam!</p>
-                        <a href="#">Criar</a>
+                        <a href="ordem.php">Criar</a>
                         </div>
                     </div>
                 </div>
@@ -76,7 +76,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_name'])) {
                         <div class="details">
                         <h2>Editar Chamado</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quibusdam!</p>
-                        <a href="#">Editar</a>
+                        <a href="listar_ordem.php">Editar</a>
                         </div>
                     </div>
                 </div>
