@@ -19,11 +19,26 @@ if (!$conn) {
     die("Falha na conexão com o banco de dados: " . mysqli_connect_error());
 }
 
-// Prepara a consulta SQL para obter as ordens
-$sql = "SELECT ordem.ordem_id, equipamento, defeito, acessorios, users.name AS usuario 
-        FROM ordem 
-        INNER JOIN users ON ordem.user_id_ordem = users.user_id 
-        ORDER BY ordem.ordem_id DESC";
+$user_id_listar = $_SESSION['user_id'];
+
+if ($_SESSION['tipo'] === 'cliente') {
+
+    // Prepara a consulta SQL para obter as ordens
+    $sql = "SELECT ordem.ordem_id, equipamento, defeito, acessorios, users.name AS usuario 
+    FROM ordem 
+    INNER JOIN users ON ordem.user_id_ordem = users.user_id
+    WHERE ordem.user_id_ordem = $user_id_listar
+    ORDER BY ordem.ordem_id DESC";
+}
+
+elseif ($_SESSION['tipo'] === 'admin') {
+
+    // Prepara a consulta SQL para obter as ordens
+    $sql = "SELECT ordem.ordem_id, equipamento, defeito, acessorios, users.name AS usuario 
+    FROM ordem 
+    INNER JOIN users ON ordem.user_id_ordem = users.user_id 
+    ORDER BY ordem.ordem_id DESC";
+}
 
 // Executa a consulta SQL
 $resultado = mysqli_query($conn, $sql);
@@ -32,7 +47,7 @@ $resultado = mysqli_query($conn, $sql);
 if (mysqli_num_rows($resultado) > 0) {
     // Cria a tabela HTML para exibir as ordens
     echo "<table>";
-    echo "<tr><th>ID</th><th>Equipamento</th><th>Defeito</th><th>Acessórios</th><th>Usuário</th></tr>";
+    echo "<tr><th>ID</th><th>Equipamento</th><th>Defeito</th><th>Acessórios</th><th>Usuário</th><th>Orçamento</th></tr>";
     
     // Loop para exibir cada ordem na tabela
     while ($row = mysqli_fetch_assoc($resultado)) {
@@ -42,6 +57,7 @@ if (mysqli_num_rows($resultado) > 0) {
         echo "<td>" . $row["defeito"] . "</td>";
         echo "<td>" . $row["acessorios"] . "</td>";
         echo "<td>" . $row["usuario"] . "</td>";
+        echo "<td><a href='orcamento.php'>Status</a></td>";
         echo "</tr>";
     }
     
@@ -51,9 +67,19 @@ if (mysqli_num_rows($resultado) > 0) {
     echo "Não há ordens para exibir.";
 }
 
+
+if ($_SESSION['tipo'] === 'cliente') {
 ?>
-<a href="home.php">Retornar</a>
+    <a href="home.php">Retornar</a>
 <?php
+} 
+
+elseif ($_SESSION['tipo'] === 'admin') {
+?>
+    <a href="home_admin.php">Retornar</a>
+<?php
+}
+
 
 }
 // Fecha a conexão com o banco de dados

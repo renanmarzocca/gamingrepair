@@ -33,7 +33,8 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
         exit();
 
-    }else{
+    }
+    else{
 
         $sql = "SELECT * FROM users WHERE user_name='$uname' AND password='$pass'";
 
@@ -43,7 +44,7 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
             $row = mysqli_fetch_assoc($result);
 
-            if ($row['user_name'] === $uname && $row['password'] === $pass) {
+            if ($row['user_name'] === $uname && $row['password'] === $pass && $row['tipo'] === 'cliente' ) {
 
                 echo "Logged in!";
 
@@ -59,26 +60,43 @@ if (isset($_POST['uname']) && isset($_POST['password'])) {
 
                 $_SESSION['tel'] = $row['tel'];
 
+                $_SESSION['tipo'] = $row['tipo'];
+
                 
                 header("Location: home.php");
 
+            }elseif ($row['user_name'] === $uname && $row['password'] === $pass && $row['tipo'] === 'admin' )  {
+
+                echo "Logged in!";
+
+                /* Conexoes basicas */
+
+                $_SESSION['user_id'] = $row['user_id'];
+
+                $_SESSION['user_name'] = $row['user_name'];
+
+                $_SESSION['name'] = $row['name'];
+
+                $_SESSION['end'] = $row['end'];
+
+                $_SESSION['tel'] = $row['tel'];
+
+                $_SESSION['tipo'] = $row['tipo'];
+
+                
+                header("Location: home_admin.php");
+            }
+
                 exit();
 
-            }else{
+            }
+            else{
 
                 header("Location: index.php?error=Incorect User name or password");
 
                 exit();
 
             }
-
-        }else{
-
-            header("Location: index.php?error=Incorect User name or password");
-
-            exit();
-
-        }
 
     }
 

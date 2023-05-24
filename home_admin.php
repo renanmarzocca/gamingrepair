@@ -80,6 +80,20 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_name'])) {
                         </div>
                     </div>
                 </div>
+
+                <div class="card">
+                    <div class="lines"></div>
+                    <div class="imgBx">
+                        <img src="images/visu.png">
+                    </div>
+                    <div class="content">
+                        <div class="details">
+                        <h2>Criar Orçamento</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quibusdam!</p>
+                        <a href="#">Criar</a>
+                        </div>
+                    </div>
+                </div>
                 
             </div>
 
