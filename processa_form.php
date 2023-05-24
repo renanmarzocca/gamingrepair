@@ -25,8 +25,8 @@ $acessorios = $_POST['acessorios'];
 $user_id = $_SESSION['user_id'];
 
 // Prepara a consulta SQL para inserir os dados na tabela "ordem"
-$sql = "INSERT INTO ordem (equipamento, defeito, acessorios, user_id_ordem, name_ordem) 
-        SELECT '$equipamento', '$defeito', '$acessorios', users.user_id, users.name 
+$sql = "INSERT INTO ordem (equipamento, defeito, acessorios, user_id_ordem, name_ordem, end_ordem, tel_ordem) 
+        SELECT '$equipamento', '$defeito', '$acessorios', users.user_id, users.name, users.end, users.tel
         FROM users 
         WHERE users.user_id = '$user_id'";
 

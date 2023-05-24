@@ -57,7 +57,7 @@ if (mysqli_num_rows($resultado) > 0) {
         echo "<td>" . $row["defeito"] . "</td>";
         echo "<td>" . $row["acessorios"] . "</td>";
         echo "<td>" . $row["usuario"] . "</td>";
-        echo "<td><a href='orcamento.php'>Status</a></td>";
+        echo "<td><a href='orcamento.php?ordem_id=" . $row["ordem_id"] . "'>Status</a></td>";
         echo "</tr>";
     }
     
