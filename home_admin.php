@@ -90,7 +90,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_name'])) {
                         <div class="details">
                         <h2>Criar Orçamento</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quibusdam!</p>
-                        <a href="#">Criar</a>
+                        <a href="listar_ordem.php">Criar</a>
                         </div>
                     </div>
                 </div>
