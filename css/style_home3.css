@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap');
+
 
 *{
     margin: 0;
@@ -11,11 +12,11 @@
 .hero{
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(black,#7a7a7a)
+    background: linear-gradient(black,#1a1a1a)
 }
 /* MENU NAVEGAÇÃO CSS */ 
 nav{
-    background: #1a1a1a;
+    background: linear-gradient(black,#1a1a1a);
     width: 100%;
     padding: 10px 10%;
     display: flex; 
@@ -36,7 +37,7 @@ h3{
     top: 32%;
     left: 16.5%;
     /*font-family: 'Zen Dots', cursive;*/
-    color: #f75151;
+    color: #0f0;
     
     
 }
@@ -199,7 +200,7 @@ nav ul li a{
     left: 50%;
     width: 600px;
     height: 120px;
-    background: linear-gradient(transparent,#45f3ff, #45f3ff, #45f3ff,transparent);
+    background: linear-gradient(transparent,#0f0, #0f0, #0f0,transparent);
     animation: animate 4s linear infinite;
     animation-play-state: paused;
 }
@@ -256,7 +257,7 @@ nav ul li a{
     width: 500px;
     height: 150px;
     transform: translate(-50%, -50%);
-    background: linear-gradient(transparent,#ff3c7b, #ff3c7b, #ff3c7b,transparent);
+    background: linear-gradient(transparent,#0f0, #0f0, #0f0,transparent);
     animation: animate2 6s linear infinite;
     animation-play-state: paused;
 }
@@ -321,13 +322,13 @@ nav ul li a{
 
 .card .content .details h2 {
     font-size: 1.5em;
-    font-weight: 500;
-    color: #45f3ff;
+    font-weight: 400;
+    color: #fff;
     line-height: 1.2em;
 }
 
 .card .content .details p {
-    color: #fff;
+    color: #c4c3c3;
     opacity: 0;
     transition: 0.5s;
 }
@@ -335,10 +336,11 @@ nav ul li a{
 .card .content .details a {
     display: inline-block;
     padding: 8px 15px;
-    background: #45f3ff;
-    color: #292929;
-    margin-top: 10px;
+    background: #fff;
+    color: rgb(0, 0, 0);
+    font-size: 1.0em;
     font-weight: 500;
+    margin-top: 10px;
     text-decoration: none;
     opacity: 0;
     transition: 0.5s;

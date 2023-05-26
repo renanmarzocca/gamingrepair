@@ -90,6 +90,7 @@ if (mysqli_num_rows($resultado) > 0) {
         echo "<td>" . $row["usuario"] . "</td>";
         echo "<td><a href='orcamento.php?ordem_id=" . $row["ordem_id"] . "'>Status</a></td>";
         echo "<td><a href='orcamento_criar.php?ordem_id=" . $row["ordem_id"] . "'>Criar</a></td>";
+        echo "<td><a href='orcamento_criar.php?ordem_id=" . $row["ordem_id"] . "'>Excluir</a></td>";
         echo "</tr>";
     }
     

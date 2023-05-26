@@ -11,8 +11,8 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_name'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type=text/css href="css/style_home2.css">
-    <title>Game Consert | Home</title>
+    <link rel="stylesheet" type=text/css href="css/style_home3.css">
+    <title>GAME FIX | Home</title>
 </head>
     <body>
 
@@ -21,7 +21,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_name'])) {
           <!-- NAVEGAÇÃO !-->
           <nav>
                <!--<img src="images/logo.png" class="logo"> -->
-               <h3>Game Consert</h3>
+               <h3>GAME FIX</h3>
                <ul>
                     <li><a href="#">Inicio</a></li>
                     <li><a href="#">Chamados</a></li>
@@ -56,7 +56,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_name'])) {
                 <div class="card">
                     <div class="lines"></div>
                     <div class="imgBx">
-                        <img src="images/os.png">
+                        <img src="images/create.png">
                     </div>
                     <div class="content">
                         <div class="details">
@@ -70,7 +70,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_name'])) {
                 <div class="card">
                     <div class="lines"></div>
                     <div class="imgBx">
-                        <img src="images/edit.png">
+                        <img src="images/status.png">
                     </div>
                     <div class="content">
                         <div class="details">
