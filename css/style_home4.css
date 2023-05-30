@@ -27,8 +27,7 @@ nav{
 /*LOGO E ESCRITA CSS */
 .logo{
     width: 100px;
-    margin-right: 16px;
-    
+    margin-right: 16px;   
 }
 
 h3{
@@ -37,8 +36,7 @@ h3{
     top: 32%;
     left: 16.5%;
     /*font-family: 'Zen Dots', cursive;*/
-    color: #0f0;
-    
+    color: #0f0; 
     
 }
 

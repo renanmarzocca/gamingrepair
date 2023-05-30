@@ -11,7 +11,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_name'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type=text/css href="css/style_home3.css">
+    <link rel="stylesheet" type=text/css href="css/style_home4.css">
     <title>GAME FIX | Home</title>
 </head>
     <body>
@@ -74,14 +74,14 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_name'])) {
                     </div>
                     <div class="content">
                         <div class="details">
-                        <h2>Status da Ordem</h2>
+                        <h2>Gerenciar Ordem</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, quibusdam!</p>
                         <a href="listar_ordem.php">Listar</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="card">
+                <!-- <div class="card">
                     <div class="lines"></div>
                     <div class="imgBx">
                         <img src="images/visu.png">
@@ -93,7 +93,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_name'])) {
                         <a href="listar_ordem.php">Criar</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 
             </div>
 
